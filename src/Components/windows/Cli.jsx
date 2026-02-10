@@ -113,6 +113,37 @@ Open to internships and entry-level full-stack or frontend roles.
       `,
     },
 
+    // New GitHub command added
+    github: {
+      description: "Show my GitHub repositories",
+      usage: "github",
+      fn: async () => {
+        try {
+          const res = await fetch(
+            "https://api.github.com/users/Nayan129/repos",
+          );
+          const data = await res.json();
+
+          const topRepos = data
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .slice(0, 5);
+
+          let output = "Top GitHub Repositories:\n\n";
+
+          topRepos.forEach((repo, index) => {
+            output += `${index + 1}. ${repo.name}\n`;
+            output += `   Stars: ${repo.stargazers_count}\n`;
+            output += `   Language: ${repo.language || "N/A"}\n`;
+            output += `   Link: ${repo.html_url}\n\n`;
+          });
+
+          return output;
+        } catch (error) {
+          return "Error fetching GitHub data.";
+        }
+      },
+    },
+
     echo: {
       description: "Echo a passed string.",
       usage: "echo <string>",
