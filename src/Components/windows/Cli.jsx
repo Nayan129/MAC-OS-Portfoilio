@@ -1,6 +1,6 @@
 import MacWindow from "./MacWindow";
 import Terminal from "react-console-emulator";
-import projects from "../../data/github.json";
+import projects from "../../assets/github.json";
 import "./cli.scss";
 
 const Cli = ({ windowName, setWindowsState }) => {
