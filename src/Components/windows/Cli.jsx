@@ -1,5 +1,6 @@
 import MacWindow from "./MacWindow";
 import Terminal from "react-console-emulator";
+import projects from "../../data/github.json";
 import "./cli.scss";
 
 const Cli = ({ windowName, setWindowsState }) => {
@@ -36,23 +37,13 @@ Currently expanding my backend skills while building full-stack projects.
       fn: () => `
 Recent Projects:
 
-1. Portfolio Website
-   - macOS-inspired portfolio with terminal interface
-   - Tech: React, SCSS, Vite
-
-2. Employee management system 
-   - user management system using react
-   - Tech:React, tailwind , apis
-
+1. macOS Portfolio (React)
+2. Employee Management System
 3. Spotify Clone
-   - music app clone
-   - Tech: React, spotify api, tailwind
-
 4. Productivity Dashboard
-   - Daily planning web app
-   - Tech: HTML, CSS, JavaScript
+5. Cohort-2 Practice Repository
 
-Type 'github' to view my repositories.
+Type 'github' to view project links.
       `,
     },
 
@@ -106,41 +97,31 @@ Contact:
 Email: nayanbhusari02@gmail.com
 Location: India
 
-GitHub:   github.com/nayanbhusari
-LinkedIn: linkedin.com/in/nayanbhusari
+GitHub:   github.com/Nayan129
+LinkedIn: linkedin.com/in/nayan-bhusari-4618282b6
 
 Open to internships and entry-level full-stack or frontend roles.
       `,
     },
 
-    // New GitHub command added
     github: {
-      description: "Show my GitHub repositories",
+      description: "View my main GitHub projects",
       usage: "github",
-      fn: async () => {
-        try {
-          const res = await fetch(
-            "https://api.github.com/users/Nayan129/repos",
-          );
-          const data = await res.json();
+      fn: () => {
+        let output = "Featured GitHub Projects:\n\n";
 
-          const topRepos = data
-            .sort((a, b) => b.stargazers_count - a.stargazers_count)
-            .slice(0, 5);
+        projects.forEach((project, index) => {
+          output += `${index + 1}. ${project.title}\n`;
+          output += `   Repo: ${project.repolink}\n`;
 
-          let output = "Top GitHub Repositories:\n\n";
+          if (project.demolink) {
+            output += `   Live: ${project.demolink}\n`;
+          }
 
-          topRepos.forEach((repo, index) => {
-            output += `${index + 1}. ${repo.name}\n`;
-            output += `   Stars: ${repo.stargazers_count}\n`;
-            output += `   Language: ${repo.language || "N/A"}\n`;
-            output += `   Link: ${repo.html_url}\n\n`;
-          });
+          output += "\n";
+        });
 
-          return output;
-        } catch (error) {
-          return "Error fetching GitHub data.";
-        }
+        return output;
       },
     },
 

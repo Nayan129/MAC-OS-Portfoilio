@@ -1,47 +1,42 @@
 [
   {
     "id": 1,
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
-    "title": "MacOS Portfolio UI (React + Tailwind)",
-    "description": "A macOS-inspired portfolio interface with dock, draggable windows, smooth animations, and responsive layout. Built to feel like a real desktop experience inside the browser.",
-    "tags": ["React", "TailwindCSS", "Framer Motion", "UI/UX", "Portfolio"],
-    "repolink": "https://github.com/your-username/macos-portfolio-ui",
-    "demolink": "https://macos-portfolio-ui.vercel.app"
+    "title": "macOS Portfolio (React)",
+    "description": "An interactive macOS-inspired portfolio built with React, featuring dock navigation, draggable windows, terminal-style commands, and integrated apps like resume viewer and notes. Designed to simulate a real desktop experience inside the browser.",
+    "tags": ["React", "SCSS", "Vite", "UI/UX", "Portfolio"],
+    "repolink": "https://github.com/Nayan129/MAC-OS-Portfoilio",
+    "demolink": "https://mac-os-portfoilio-virid.vercel.app"
   },
   {
     "id": 2,
-    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
-    "title": "Terminal GitHub Explorer",
-    "description": "A terminal-style GitHub projects viewer that lists repositories like a CLI. Supports commands like help, ls, open, clear, and shows project details with repo + demo links.",
-    "tags": ["JavaScript", "React", "Terminal UI", "GitHub", "CLI"],
-    "repolink": "https://github.com/your-username/terminal-github-explorer",
-    "demolink": "https://terminal-github-explorer.vercel.app"
+    "title": "Employee Management System",
+    "description": "A responsive employee management application built with React that allows users to create, update, and delete employee records. Integrated with REST APIs and designed with a clean, user-friendly interface.",
+    "tags": ["React", "TailwindCSS", "CRUD", "REST API", "Frontend"],
+    "repolink": "https://github.com/Nayan129/employee-management",
+    "demolink": "https://employee-management.vercel.app"
   },
   {
     "id": 3,
-    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80&auto=format&fit=crop",
-    "title": "Task Manager Dashboard",
-    "description": "A clean task manager dashboard with create/update/delete tasks, filters, and local storage persistence. Designed with a product-style UI and smooth micro-interactions.",
-    "tags": ["React", "TailwindCSS", "CRUD", "LocalStorage", "Dashboard"],
-    "repolink": "https://github.com/your-username/task-manager-dashboard",
-    "demolink": "https://task-manager-dashboard.vercel.app"
+    "title": "Spotify Clone",
+    "description": "A modern music streaming UI clone inspired by Spotify, built with React. Features playlists, track layouts, and a responsive interface that mimics the structure and feel of the original platform.",
+    "tags": ["React", "Spotify API", "TailwindCSS", "Music App"],
+    "repolink": "https://github.com/Nayan129/spotify-clone",
+    "demolink": "https://spotify-clone.vercel.app"
   },
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=80&auto=format&fit=crop",
-    "title": "Weather App (Modern UI)",
-    "description": "A modern weather app with real-time search, temperature details, and clean UI cards. Includes loading states, error handling, and mobile-first responsive design.",
-    "tags": ["JavaScript", "React", "API", "TailwindCSS", "Responsive"],
-    "repolink": "https://github.com/your-username/weather-app-modern",
-    "demolink": "https://weather-app-modern.vercel.app"
+    "title": "Productivity Dashboard",
+    "description": "A daily productivity web application for managing tasks and planning activities. Built using HTML, CSS, and JavaScript with a clean, minimal interface and responsive layout.",
+    "tags": ["HTML", "CSS", "JavaScript", "Dashboard"],
+    "repolink": "https://github.com/Nayan129/productivity-dashboard",
+    "demolink": "https://productivity-dashboard.vercel.app"
   },
   {
     "id": 5,
-    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80&auto=format&fit=crop",
-    "title": "Job Tracker (Frontend Projects + Applications)",
-    "description": "A job application tracker to manage applied jobs, status updates, notes, and links. Includes search, filters, and a clean UI built for productivity and portfolio showcase.",
-    "tags": ["React", "TailwindCSS", "CRUD", "Productivity", "Frontend"],
-    "repolink": "https://github.com/your-username/job-tracker-app",
-    "demolink": "https://job-tracker-app.vercel.app"
+    "title": "Cohort-2 Practice Repository",
+    "description": "A collection of multiple frontend and backend practice projects created during a structured full-stack learning program. Includes experiments, mini-projects, and exercises built using JavaScript, React, Node.js, and Express.",
+    "tags": ["JavaScript", "React", "Node.js", "Express", "Practice"],
+    "repolink": "https://github.com/Nayan129/Cohort-2",
+    "demolink": ""
   }
 ]
