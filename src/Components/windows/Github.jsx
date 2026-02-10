@@ -9,25 +9,35 @@ const GitCard = ({
     title: "",
     description: "",
     tags: [],
-    repoLink: "",
-    demoLink: "",
+    repolink: "",
+    demolink: "",
   },
 }) => {
   return (
     <div className="card">
-      <img src={data.image} alt="" />
+      <img src={data.image} alt={data.title} />
+
       <h1>{data.title}</h1>
       <p className="description">{data.description}</p>
 
       <div className="tags">
         {data.tags.map((tag) => (
-          <p className="tag">{tag}</p>
+          <p className="tag" key={tag}>
+            {tag}
+          </p>
         ))}
       </div>
 
       <div className="urls">
-        <a href={data.repoLink}>Repository</a>
-        {data.demoLink && <a href={data.demoLink}>Demo link</a>}
+        <a href={data.repolink} target="_blank" rel="noreferrer">
+          Repository
+        </a>
+
+        {data.demolink && (
+          <a href={data.demolink} target="_blank" rel="noreferrer">
+            Demo link
+          </a>
+        )}
       </div>
     </div>
   );
@@ -37,9 +47,9 @@ const Github = ({ windowName, setWindowsState }) => {
   return (
     <MacWindow windowName={windowName} setWindowsState={setWindowsState}>
       <div className="cards">
-        {githubData.map((project) => {
-          return <GitCard data={project} />;
-        })}
+        {githubData.map((project) => (
+          <GitCard key={project.id} data={project} />
+        ))}
       </div>
     </MacWindow>
   );
